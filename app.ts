@@ -1,8 +1,18 @@
-const person = {
+const person: {
+  name: string;
+  age: number;
+  hobbies: string[];
+  role: [number, string];
+} = {
   name: 'y4shiro',
-  age: '20',
-  hobbies: ['Sports', 'Cooking']
+  age: 20,
+  hobbies: ['Sports', 'Cooking'],
+  role: [2, 'author'],
 };
+
+// person.role.push('admin'); // 3番目に追加される
+// person.role[1] = 10; // 型が違うのでエラー
+// person.role = [0, 'admin', 'user']; // 型指定と違うのでエラー
 
 let favoriteActivities: string[];
 favoriteActivities = ['Sports', 'Drive'];
