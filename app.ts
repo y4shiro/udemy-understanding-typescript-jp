@@ -7,3 +7,9 @@ userInput = 'Max';
 if (typeof userInput === 'string') {
   userName = userInput;
 }
+
+function generateError(message: string, code: number): never {
+  throw { message, errorCode: code };
+}
+
+generateError('エラーが発生しました', 500);
