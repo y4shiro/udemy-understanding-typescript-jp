@@ -1,4 +1,11 @@
-function combine(input1: number | string, input2: number | string, resultConversion: 'as-number' | 'as-text') {
+type Combinable = number | string;
+type ConversionDescriptro = 'as-number' | 'as-text';
+
+function combine(
+  input1: Combinable,
+  input2: Combinable,
+  resultConversion: ConversionDescriptro
+) {
   let result;
 
   if (
