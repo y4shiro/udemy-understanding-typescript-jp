@@ -13,13 +13,14 @@ if (age >= 20) {
 // console.log(isAdult); // アクセスできてしまう
 
 // アロー関数
-const add = (a: number, b: number) => a + b;
+const add = (a: number, b: number = 1) => a + b;
 
 const printOutput: (output: string | number) => void = output => {
   console.log(output);
 };
 
 printOutput(add(2, 5));
+printOutput(add(2));
 
 const button = document.querySelector('button');
 
