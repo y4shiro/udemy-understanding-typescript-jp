@@ -1,5 +1,5 @@
-const userName = 'Max';
-let age = 30;
+// const userName = 'Max';
+// let age = 30;
 
 // function add(a: number, b: number) {
 //   var result;
@@ -7,9 +7,9 @@ let age = 30;
 //   return result;
 // }
 
-if (age >= 20) {
-  var isAdult = true;
-}
+// if (age >= 20) {
+//   var isAdult = true;
+// }
 // console.log(isAdult); // アクセスできてしまう
 
 // アロー関数
@@ -38,7 +38,7 @@ activeHobbies.push(...hobbies);
 console.log(activeHobbies);
 
 const person = {
-  name: 'Max',
+  firstName: 'Max',
   age: 30
 };
 
@@ -55,4 +55,15 @@ const add = (...numbers: number[]) => {
 
 const addedNumbers = add(5, 10, 15, 20 ,30);
 console.log(addedNumbers);
+
+const [hobby1, hobby2, ...remainingHobbies] = hobbies;
+console.log(hobby1, hobby2);
+
+
+const {
+  firstName,
+  age
+} = person;
+
+console.log(firstName, age, person);
 
