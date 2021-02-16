@@ -1,10 +1,14 @@
-const button = document.querySelector('button')!;
+const userName = 'Max';
+let age = 30;
 
-function clickHandler(message: string) {
-  // let userName = 'John';
-  console.log('Clicked! ' + message);
+function add(a: number, b: number) {
+  var result;
+  result = a + b;
+  return result;
 }
 
-if (button) {
-  button.addEventListener('click', clickHandler.bind(null, "Your're welcome!"));
+if (age >= 20) {
+  var isAdult = true;
 }
+// console.log(isAdult); // アクセスできてしまう
+
