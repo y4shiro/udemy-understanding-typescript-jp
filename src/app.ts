@@ -13,14 +13,14 @@ if (age >= 20) {
 // console.log(isAdult); // アクセスできてしまう
 
 // アロー関数
-const add = (a: number, b: number = 1) => a + b;
+// const add = (a: number, b: number = 1) => a + b;
 
-const printOutput: (output: string | number) => void = output => {
-  console.log(output);
-};
+// const printOutput: (output: string | number) => void = output => {
+//   console.log(output);
+// };
 
-printOutput(add(2, 5));
-printOutput(add(2));
+// printOutput(add(2, 5));
+// printOutput(add(2));
 
 const button = document.querySelector('button');
 
@@ -46,4 +46,13 @@ const person = {
 const copiedPerson = {
   ...person,
 };
+
+const add = (...numbers: number[]) => {
+  return numbers.reduce((curResult, curValue) => {
+    return curResult + curValue;
+  }, 0);
+};
+
+const addedNumbers = add(5, 10, 15, 20 ,30);
+console.log(addedNumbers);
 
