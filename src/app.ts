@@ -1,11 +1,7 @@
 class Department {
-  // id: string; // フィールド
-  // name: string;
   private employees: string[] = [];
 
-  constructor(private id: string, public name: string) {
-    // this.id = id;
-    // this.name = n;
+  constructor(private readonly id: string, public name: string) {
   }
 
   describe(this: Department) {
