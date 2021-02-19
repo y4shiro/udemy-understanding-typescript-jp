@@ -1,7 +1,13 @@
 class Department {
+  static fiscalYear = 2021; // 会計年度
   protected employees: string[] = [];
 
+  static createEmployee(name: string) {
+    return { name: name };
+  }
+
   constructor(private readonly id: string, public name: string) {
+    console.log(this.fiscalYear);
   }
 
   describe(this: Department) {
@@ -58,6 +64,9 @@ class AccountingDepartment extends Department {
     this.employees.push(name);
   }
 }
+
+const employee1 = Department.createEmployee('Max');
+console.log(employee1, Department.fiscalYear);
 
 const it = new ITDepartment('d1', ['Max']);
 
