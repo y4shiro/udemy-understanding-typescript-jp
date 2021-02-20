@@ -82,3 +82,32 @@ function useVehicle(vehicle: Vehicle) {
 useVehicle(v1);
 useVehicle(v2);
 
+interface Bird {
+  type: 'bird'; // 実際の値ではなくリテラル型
+  flyingSpeed: number;
+}
+
+interface Horse {
+  type: 'horse';
+  runningSpeed: number;
+}
+
+type Animal = Bird | Horse;
+
+function moveAnimas(animal: Animal) {
+  let speed;
+
+  switch (animal.type) {
+    case 'bird':
+      speed = animal.flyingSpeed;
+      break;
+    case 'horse':
+      speed = animal.runningSpeed;
+      break;
+  }
+
+  console.log('移動速度: ' + speed);
+}
+
+moveAnimas({ type: 'bird', flyingSpeed: 10 });
+
