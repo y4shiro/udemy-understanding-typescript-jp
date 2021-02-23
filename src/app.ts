@@ -89,3 +89,6 @@ class Product {
   }
 }
 
+const p1 = new Product("Book", 100);
+const p2 = new Product("Book2", 200);
+
