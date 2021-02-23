@@ -72,3 +72,22 @@ const numberStorage = new DataStorage<number>();
 // objStorage.removeItem(obj);
 
 // console.log(objStorage.getItems());
+
+interface CourceGoal {
+  title: string;
+  description: string;
+  completeUntile: Date;
+}
+
+function createCourceGoal(title: string, description: string, date: Date): CourceGoal {
+  let courceGoal: Partial<CourceGoal> = {};
+  courceGoal.title = title;
+  courceGoal.description = description;
+  courceGoal.completeUntile = date;
+
+  return courceGoal as CourceGoal;
+}
+
+const names: Readonly<string[]> = ['Max', 'Anna'];
+// names.push('Manu');
+
